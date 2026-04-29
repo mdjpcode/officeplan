@@ -1,13 +1,14 @@
 :root { font-family: Inter, system-ui, Arial, sans-serif; }
 body { margin: 0; background: #f4f6fb; color: #1f2937; }
-.container { max-width: 1100px; margin: 0 auto; padding: 1rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
 .date-row { display: inline-flex; gap: .6rem; align-items: center; margin-bottom: 1rem; }
-.dashboard { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1rem; }
-.card { background: #fff; border-radius: 10px; padding: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
-.assign-row { margin: .5rem 0; }
+.dashboard { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1rem; margin-bottom: 1.2rem; }
+.card, .calendar-card { background: #fff; border-radius: 10px; padding: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
 select, button, input { padding: .4rem .5rem; }
 ul { list-style: none; padding: 0; margin: .5rem 0 0; }
 li { display: flex; justify-content: space-between; align-items: center; margin-bottom: .35rem; }
-.muted { color: #6b7280; }
 .error { color: #b91c1c; }
-.helper { color: #374151; }
+.calendar-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: .8rem; }
+.calendar-card h3 { margin-top: 0; }
+.calendar-card p { margin: .25rem 0; font-size: .9rem; }
+.calendar-card.active { outline: 2px solid #3b82f6; }

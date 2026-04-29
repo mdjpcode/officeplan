@@ -25,7 +25,8 @@ function doGet(e) {
 }
 
 function doPost(e) {
-  const payload = JSON.parse(e.postData.contents || '{}');
+  const raw = (e && e.parameter && e.parameter.payload) || (e && e.postData && e.postData.contents) || '{}';
+  const payload = JSON.parse(raw);
   const { date, staff, location } = payload;
 
   if (!date || !staff || !location) {
